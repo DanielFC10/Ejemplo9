@@ -3,19 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package modelo.dto;
-
-import java.io.Serializable;
+package edu.co.sena.modelo.dto;
 
 /**
  *
  * @author Juan
  */
-public class Propietario implements Serializable{
-    
+public class UsuarioPK {
+
     private String cuentaTipoDocumento;
     private String cuentaNumeroDocumento;
-    private String equipoCodigoBarras;
+
+    public UsuarioPK(String cuentaTipoDocumento, String cuentaNumeroDocumento) {
+        this.cuentaTipoDocumento = cuentaTipoDocumento;
+        this.cuentaNumeroDocumento = cuentaNumeroDocumento;
+    }
+
+    public UsuarioPK() {
+    }
 
     public String getCuentaTipoDocumento() {
         return cuentaTipoDocumento;
@@ -33,17 +38,9 @@ public class Propietario implements Serializable{
         this.cuentaNumeroDocumento = cuentaNumeroDocumento;
     }
 
-    public String getEquipoCodigoBarras() {
-        return equipoCodigoBarras;
-    }
-
-    public void setEquipoCodigoBarras(String equipoCodigoBarras) {
-        this.equipoCodigoBarras = equipoCodigoBarras;
-    }
-
     @Override
     public String toString() {
-        return "Propietario{" + "cuentaTipoDocumento=" + cuentaTipoDocumento + ", cuentaNumeroDocumento=" + cuentaNumeroDocumento + ", equipoCodigoBarras=" + equipoCodigoBarras + '}';
+        return "UsuarioPK{" + "cuentaTipoDocumento=" + cuentaTipoDocumento + ", cuentaNumeroDocumento=" + cuentaNumeroDocumento + '}';
     }
-    
+
 }

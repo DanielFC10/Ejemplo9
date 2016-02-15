@@ -3,10 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package modelo.dao.mysql;
+package edu.co.sena.modelo.dao.mysql;
 
 import java.sql.Connection;
-import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,7 +16,7 @@ import java.sql.ResultSet;
  */
 public class ResourceManager {
 
-    private static String JDBC_URL = "jdbc:mysql://localhost:3306/Pro";
+    private static String JDBC_URL = "jdbc:mysql://localhost:4306/pro";
     private static String JDBC_USER = "root";
     private static String JDBC_PASSWORD = "123456789";
 

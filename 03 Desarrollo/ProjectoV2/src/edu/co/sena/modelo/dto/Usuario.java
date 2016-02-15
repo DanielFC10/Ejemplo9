@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package modelo.dto;
+package edu.co.sena.modelo.dto;
 
 import java.io.Serializable;
 
@@ -61,7 +61,11 @@ public class Usuario implements Serializable{
 
     @Override
     public String toString() {
-        return "Usuario{" + "contrasenia=" + contrasenia + ", rol=" + rol + ", cuentaTipoDocumento=" + cuentaTipoDocumento + ", cuentaNumeroDocumento=" + cuentaNumeroDocumento + ", correoRecuperacion=" + correoRecuperacion + '}';
+        return "Usuario{" + "Contrasenia: " + contrasenia 
+                + ", Rol: " + rol + ", Cuenta Tipo Documento: " 
+                + cuentaTipoDocumento + ", Cuenta Numero Documento: " 
+                + cuentaNumeroDocumento + ", Correo Recuperacion: " 
+                + correoRecuperacion + '}';
     }
     
 

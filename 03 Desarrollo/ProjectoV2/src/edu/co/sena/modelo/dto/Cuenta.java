@@ -3,26 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package modelo.dto;
+package edu.co.sena.modelo.dto;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 
 /**
  *
  * @author Juan
  */
-public class Cuenta implements Serializable{
+public class Cuenta implements Serializable {
+
     private String tipoDocumento;
     private String numeroDocumento;
     private String cargo;
     private Date fechaTerminacion;
-    private Integer estado;
     private Byte foto;
+    private Boolean estado;
     private String primerNombre;
     private String segundoNombre;
     private String primerApellido;
     private String segundoApellido;
+
+    public Cuenta() {
+    }
 
     public String getTipoDocumento() {
         return tipoDocumento;
@@ -48,19 +52,11 @@ public class Cuenta implements Serializable{
         this.cargo = cargo;
     }
 
-    public Date getFechaTerminacion() {
-        return fechaTerminacion;
-    }
-
-    public void setFechaTerminacion(Date fechaTerminacion) {
-        this.fechaTerminacion = fechaTerminacion;
-    }
-
-    public Integer getEstado() {
+    public Boolean getEstado() {
         return estado;
     }
 
-    public void setEstado(Integer estado) {
+    public void setEstado(Boolean estado) {
         this.estado = estado;
     }
 
@@ -106,8 +102,23 @@ public class Cuenta implements Serializable{
 
     @Override
     public String toString() {
-        return "Cuenta{" + "tipoDocumento=" + tipoDocumento + ", numeroDocumento=" + numeroDocumento + ", cargo=" + cargo + ", fechaTerminacion=" + fechaTerminacion + ", estado=" + estado + ", foto=" + foto + ", primerNombre=" + primerNombre + ", segundoNombre=" + segundoNombre + ", primerApellido=" + primerApellido + ", segundoApellido=" + segundoApellido + '}';
+        return "Cuenta{" + "Tipo Documento: " + tipoDocumento
+                + ", Dumero Documento: " + numeroDocumento
+                + ", Cargo: " + cargo + ", Fecha de Terminacion: "
+                + fechaTerminacion + ", estado: " + estado
+                + ", Foto: " + foto + ", Primer Nombre: "
+                + primerNombre + ", Segundo Nombre: "
+                + segundoNombre + ", Primer Apellido: "
+                + primerApellido + ", Segundo Apellido: "
+                + segundoApellido + '}';
     }
-    
-    
+
+    public Date getFechaTerminacion() {
+        return fechaTerminacion;
+    }
+
+    public void setFechaTerminacion(Date fechaTerminacion) {
+        this.fechaTerminacion = fechaTerminacion;
+    }
+
 }
